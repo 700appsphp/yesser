@@ -1,0 +1,44 @@
+<%- model_class = Faq -%>
+<% provide(:title, t('faqs.plural')) %>
+<% provide(:icon_class, "fa fa-question-circle") %>
+
+<div class="box box-solid">
+  <div class="box-header">
+    <div class="box-tools">
+      <form action="<%= faqs_path %>" method="GET">
+        <div class="input-group">
+          <input type="text" name="search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="<%=t "helpers.search" %>" value="<%= params[:search] %>" />
+          <div class="input-group-btn">
+            <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+      </form>
+    </div><!-- /.box-tools -->
+  </div><!-- /.box-header -->
+  <div class="box-body table-responsive faq-index">
+    <% @faqs.each do |faq| %>
+      <div class="box box-primary collapsed-box">
+        <div class="box-header">
+          <!-- tools box -->
+          <div class="pull-right box-tools">
+            <%=l faq.created_at %>
+            <button class="btn btn-primary btn-sm btn-flat" data-widget='collapse' data-toggle="tooltip" title="<%=t 'helpers.expand' %>"><i class="fa fa-expand"></i></button>
+          </div><!-- /. tools -->
+          <i class="fa fa-question-circle"></i>
+          <h3 class="box-title"><%= faq.question %></h3>
+        </div><!-- /.box-header -->
+        <div class="box-body" style="display: none;">
+          <%= faq.answer %>
+        </div><!-- /.box-body -->
+          <div class="box-footer" style="display: none;">
+            <%= render 'shared/edit_button', path: edit_faq_path(faq) %>
+            <%= render 'shared/delete_button', path: faq_path(faq) %>
+          </div>
+      </div>
+    <% end %>
+
+    </div><!-- /.box-body -->
+</div>
+    <%= link_to t('faqs.new'),
+                new_faq_path,
+                :class => 'btn btn-primary' %>

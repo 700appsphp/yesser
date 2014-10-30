@@ -1,0 +1,13 @@
+<% provide(:title, t("complaints.email.edit")) %>
+<%= form_for @complaint, url: complaints_email_update_path, method: :put do |f| %>
+  <%= render 'shared/error_messages', object: @complaint %>
+  <div class="form-group">
+    <%= f.label :email, t("complaints.email.title"), class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'form-control', required: :required %>
+    </div>
+  </div>
+  <%= f.submit t("complaints.email.update"), class: "btn btn-flat btn-primary" %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            complaints_index_path, :class => 'btn btn-flat btn-default' %>
+<% end %>

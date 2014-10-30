@@ -1,0 +1,5 @@
+<%- model_class = Poll -%>
+<% provide(:title, t("helpers.titles.edit", name: @poll.question, model: model_class.model_name.human)) %>
+<div class="box box-danger">
+  <%= render :partial => 'form' %>
+</div>

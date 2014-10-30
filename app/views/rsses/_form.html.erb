@@ -1,0 +1,15 @@
+<%= render 'shared/error_messages', object: @rss %>
+<div class="box box-primary">
+  <%= form_for(@rss) do |f| %>
+    <div class="box-body">
+      <div class="form-group">
+        <%= f.label :url, t("rss.url"), for: "rss_url" %>
+        <%= f.text_field :url, class: "form-control", required: :required %>
+      </div>
+    </div>
+    <div class="box-footer">
+      <%= f.submit t("rss.update"), class: "btn btn-flat btn-primary" %>
+      <%= link_to t('helpers.cancel'), show_rsses_path, class: "btn btn-flat btn-default" %>
+    </div>
+  <% end %>
+</div>

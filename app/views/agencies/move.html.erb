@@ -1,0 +1,15 @@
+<% provide(:title, [t("agencies.move"), @agency.name].join(" ")) %>
+<%= form_for @agency, url: { action: "apply_move" } do |f| %>
+  <div class="box box-danger">
+    <div class="box-body category-container">
+      <ul>
+        <%= nested_categories(@categories, 
+                              "categories/choose_category",
+                              true, f) %>
+      </ul>
+    </div>
+    <div class="box-footer">
+      <%= f.submit class: "btn btn-primary btn-flat" %>
+    </div>
+  </div>
+<% end %>

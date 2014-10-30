@@ -1,0 +1,293 @@
+ar:
+  project_name: يسِّر
+  activerecord:
+    errors:
+      models:
+        organization_user:
+          attributes:
+            current_password:
+              invalid: غير صحيح
+  about: نبذة
+  home: الرئيسية
+  error: خطأ
+  edit: تحرير
+  delete: حذف
+  categorized: مصنّف
+  uncategorized: غير مصنّف
+  welcome_message: مرحبًا بكم في %{organization}!
+  flash:
+    actions:
+      create:
+        info: تم إنشاء %{resource_name} بنجاح.
+      update:
+        info: تم تحديث %{resource_name} بنجاح.
+      destroy:
+        info: تم حذف %{resource_name} بنجاح.
+        danger: تعذر حذف %{resource_name}.
+  app_name: يسر
+  created_at: تم الإنشاء في
+  hello: مرحبًا بالعالم
+  helpers:
+    add_essential_data: أكمل بيانات مؤسستك
+    blocked: Blocked!
+    note: ملاحظة
+    alert_text: تنبيه
+    language: اللغة
+    arabic: العربية
+    english: الإنجليزية
+    titles:
+      edit: "تحديث %{model}"
+      save: حفظ %{model}
+      new:  "إنشاء %{model}"
+      delete: حذف %{model}
+      view_all: رؤية جميع ال %{model}
+    sign_in: تسجيل الدخول
+    forgot_password: نسيت كلمة السر؟
+    change_password: تغيير كلمة السر
+    logout: تسجيل الخروج
+    confirm: هل انت متأكد؟
+    cancel: إلغاء
+    error_message: 
+      one: الإستمارة تحتوي علي خطأ واحد
+      other: الإستمارة تحتوي علي %{count} أخطاء
+    labels:
+      name: إسم
+      url: عنوان URL
+      platform: بيئة العمل
+      description: توصيف
+      image: صورة
+    toggle_navigation: Toggle navigation
+    actions: أفعال
+    links:
+      back: إلي الخلف
+      cancel: إلغاء
+      confirm: هل انت متأكد؟
+      destroy: حذف
+      new: جديد
+      edit: تعديل
+    select_city: إختر مدينة
+    search: بحث
+    expand: تكبير
+  layouts:
+    application:
+      helper:
+        profile: ملف المؤسسة
+        logout: تسجيل الخروج
+  organizations:
+    plural: المؤسسات
+    create: إنشاء مؤسسة جديدة
+    details: تفاصيل المؤسسة
+    edit: تحرير المؤسسة
+    edit_password: تحرير كلمة المرور
+    name: مؤسسة
+    admins_list: المديرون
+    admin_user: حساب المدير
+    phones_list: أرقام هواتف المؤسسة
+    phone: رقم الهاتف
+    add_phone: إضافة رقم هاتف
+    faxes_list: أرقام فاكس المؤسسة
+    fax: رقم الفاكس
+    add_fax: إضافة رقم فاكس
+    emails_list: عناوين البريد الإلكتروني للمؤسسة
+    email: البريد الإلكتروني
+    add_email: إضافة بريد إلكتروني
+    invalid_email: هو بريد إلكتروني غير صالح
+    social_networks_list: الشبكات الاجتماعية للمؤسسة
+    social_network: الشبكة الاجتماعية
+    add_social_network: إضافة شبكة اجتماعية
+    app_list: قائمة التطبيق
+    app_details: تفاصيل التطبيق
+    location:
+      title: الموقع
+      longitude: خط الطول
+      latitude: دائرة العرض
+  organization_users:
+    edit_password: تحرير كلمة المرور
+    edit_password_for: تحرير كلمة مرور %{name}
+    email: البريد الإلكتروني
+    password: كلمة المرور
+    password_confirmation: إعادة كتابة كلمة المرور
+    forgot_password: لقد نسيت كلمة المرور
+    details: تفاصيل عن مدير المؤسسة
+  updated_at: آخر تحديث
+  categories:
+    name: الفئة
+    create: إنشاء فئة جديدة
+    plural: الفئات
+    new_root: فئة أصل جديد
+    new_child: طفل جديد
+    created: تم إنشاء الفئة بنجاح
+    updated: تم تحديث الفئة بنجاح
+    destroyed: تم حذف الفئة بنجاح
+    has_children_alert: لاحظ أن الفئة الأب %{parent} تشتمل على عناصر مصنّفة سيتم نقلها إلى هذه الفئة الجديدة
+  agencies:
+    name:
+      one: وكالة واحدة
+      other: لا توجد وكالات
+    title: وكالة
+    plural: الوكالات
+    details: تفاصيل الوكالة
+    create: وكالة جديدة
+    new_root: وكالة جديدة غير مصنّفة
+    no_agencies: لا توجد وكالات
+    creation_refused: لا يمكنك إنشاء وكالة ضمن الفئة ليست طرفية
+    uncategorized: الوكالات غير المصنّفة
+    use_categories: الطريقة المصنّفة
+    use_no_categories: الطريقة غير المصنّفة
+    move: نقل
+    fresh_install_notify_title: قم بالإختيار
+    fresh_install_notify: يُرجى اختيار طريقة لإضافة وكالة جديدة. اعلم أن اختيارك سيؤثر على جميع الوكالات المستقبلية!
+    add_fax: إضافة فاكس
+    add_email: إضافة بريد إلكتروني
+    add_phone: إضافة رقم هاتف
+    eservices:
+      fresh_install_note: يُرجى ملاحظة أنك تضيف خدمات إلكترونية ضمن هذه الوكالة. إذا اخترت إضافة خدمات إلكترونية هنا، فلن تكون قادرًا على إضافة أيّ خدمات إلكترونية للمؤسسات.
+      not_allowed: لقد اخترت استخدام الخدمات الإلكترونية الخاصة بالمؤسسة فقط. إذا كنت ترغب في استخدام الخدمات الإلكترونية للوكالة بدلاً من ذلك، فاحذف جميع الخدمات الإلكترونية وفئاتها المملوكة للمؤسسة أولاً.
+  eservices:
+    no_eservices: لا توجد خدمات إلكترونية
+    name:
+      zero: لا توجد خدمات إلكترونية
+      one: خدمة إلكترونية واحدة
+      other: '%{count} خدمة إلكترونية'
+    title: خدمة إلكترونية
+    plural: خدمات إلكترونية
+    new: خدمة إلكترونية جديدة
+    new_root: خدمة إلكترونية غير مصنّفة جديدة
+    creation_refused: لا يمكنك إنشاء خدمة إلكترونية ضمن فئة ليست طرفية
+    uncategorized: خدمات إلكترونية غير مصنّفة
+    move: نقل
+    fresh_install_notify_title: قم الإختيار
+    fresh_install_note: يُرجى ملاحظة أن أيّ خدمات إلكترونية تقوم بإنشائها هنا هي خدمات إلكترونية مباشرة للمؤسسة الحالية، وهي لا تنتمي إلى أيّ وكالة. إذا اخترت إضافة خدمات إلكترونية هنا، فلن تكون قادرًا على إضافة خدمات إلكترونية للوكالة.
+    fresh_install_notify: يُرجى اختيار طريقة لإضافة خدمة إلكترونية جديدة. اعلم أن اختيارك سيؤثر على جميع الخدمات الإلكترونية المستقبلية!
+    use_categories: الطريقة المصنّفة
+    use_no_categories: الطريقة غير المصنّفة
+  agency_categories:
+    title: فئة الوكالات
+    index:
+      title: فئات الوكالات
+  agency_category:
+    delete_alert: انت ستقوم بحذف جميع الوكالات والتصنيفات الفرعية تحت هذا التصنيف. هل انت متأكد من هذا؟
+  eservice_categories:
+    title: فئة الخدمة الإلكترونية
+    index:
+      title: فئات الخدمة الإلكترونية
+    eservices_not_allowed: لقد اخترت استخدام الخدمات الإلكترونية الخاصة بالوكالة فقط. إذا كنت ترغب في استخدام الخدمات الإلكترونية للمؤسسة مباشرةً بدلاً من ذلك، فاحذف جميع الخدمات الإلكترونية وفئاتها المملوكة للوكالات أولاً.
+  eservice_category:
+    delete_alert: انت ستقوم بحذف جميع الخدمات الإلكترونية والتصنيفات الفرعية تحت هذا التصنيف. هل انت متأكد من هذا؟
+  polls:
+    index:
+      title: قائمة استطلاعات الرأي
+    answers:
+      answers_count:
+        zero: لا توجد اصوات
+        one: صوت واحد
+        other: '%{count} صوت'
+    title: استطلاع رأي
+    plural: استطلاعات الرأي
+    new: إنشاء إستطلاع رأي
+  faqs:
+    index:
+      title: قائمة الأسئلة الشائعة
+    title: الأسئلة الشائعة
+    plural: الأسئلة الشائعة
+    new: سؤال شائع جديد
+    create: إنشاء سؤال شائع
+  complaints:
+    title: الشكاوى والاقتراحات
+    first_time: يُرجى اختيار طريقة لتلقي الشكاوى والاقتراحات.
+    amer:
+      title: الرقم التعريفي لآمر
+      new: استخدام آمر
+      use: استخدام آمر بدلاً من ذلك
+      edit: تحرير معرّف هوية آمر
+      update: تحديث معرّف هوية آمر
+      update_success: تم تحديث معرّف هوية آمر بنجاح
+    email:
+      title: البريد الإلكتروني
+      new: استخدام البريد الإلكتروني
+      use: إستخدام البريد الإلكتروني بدلاً من ذلك
+      edit: تحرير البريد الإلكتروني
+      update: تحديث البريد الإلكتروني
+      update_success: تم تحديث البريد الإلكتروني بنجاح
+  rss:
+    title: الأخبار
+    url: عنوان URL
+    no_rss_alert: لا يوجد لديك عنوان URL مُحدّد للأخبار
+    add_url: إضافة عنوان URL للأخبار
+    edit: تحرير الأخبار
+    update: تحديث الأخبار
+  messages:
+    labels:
+      title: العنوان
+    title: رسالة
+    plural: رسائل
+    create: رسالة جديدة
+  cities:
+    plural: المدن
+    english_name_error: يُرجى إدخال اسم إنجليزي صالح. يُسمح فقط بالأحرف الإنجليزية والشرطات.
+    arabic_name_error: يُرجى إدخال اسم عربي صالح. يُسمح فقط بالأحرف العربية و"التشكيل" والشرطات.
+  phones:
+    number:
+      invalid: الرقم غير صحيح
+  devise:
+    confirmations:
+      confirmed: تم تأكيد حسابك بنجاح.
+      send_instructions: ستتلقى رسالة بريد إلكتروني بها تعليمات بخصوص كيفية تأكيد حسابك في غضون بضعة دقائق.
+      send_paranoid_instructions: إذا كان عنوان بريدك الإلكتروني موجودًا في قاعدة بياناتنا، فستتلقى بريدًا إلكترونيًا بها تعليمات بخصوص كيفية تأكيد حسابك في غضون بضعة دقائق.
+    failure:
+      already_authenticated: لقد سجّلت الدخول بالفعل.
+      inactive: لم يتم تنشيط حسابك حتى الآن.
+      invalid: خطأ في البريد الإلكتروني أو كلمة المرور.
+      locked: تم تأمين حسابك.
+      last_attempt: لديك محاولة واحدة إضافية قبل تأمين حسابك.
+      not_found_in_database: خطأ في البريد الإلكتروني أو كلمة المرور.
+      timeout: انتهى تاريخ صلاحية الجلسة. يُرجى تسجيل الدخول مرة أخرى للمتابعة.
+      unauthenticated: يتعين عليك تسجيل الدخول أو التسجيل قبل المتابعة.
+      unconfirmed: يتعين عليك تأكيد حسابك قبل المتابعة.
+    mailer:
+      confirmation_instructions:
+        subject: تعليمات التأكيد.
+      reset_password_instructions:
+        subject: تعليمات إعادة تعيين كلمة المرور
+      unlock_instructions:
+        subject: تعليمات إلغاء التأمين
+    omniauth_callbacks:
+      failure: تعذر مصادقتك من %{kind} بسبب "%{reason}".
+      success: تمت المصادقة بنجاح من حساب %{kind}.
+    passwords:
+      no_token: لا يمكنك الوصول إلى هذه الصفحة بدون الانتقال من رسالة بريد إعادة تعيين كلمة المرور. إذا كنت بالفعل قد انتقلت من رسالة بريد إعادة تعيين كلمة المرور، يُرجى التأكّد من أنك استخدمت عنوان URL الكامل الذي زوّدناك به.
+      send_instructions: ستتلقى رسالة بريد إلكتروني بها تعليمات بخصوص كيفية إعادة تعيين كلمة المرور في غضون بضعة دقائق.
+      send_paranoid_instructions: إذا كان عنوان بريدك الإلكتروني موجودًا في قاعدة بياناتنا، فستتلقى رابط استعادة كلمة المرور في عنوان بريدك الإلكتروني في غضون بضعة دقائق.
+      updated: تم تغيير كلمة المرور بنجاح. لقد سجلت الدخول الآن.
+      updated_not_active: تم تغيير كلمة المرور بنجاح.
+      request_reset_instructions: أرسل لي تعليمات إستعادة كلمة المرور
+      reset_password: غيّر كلمة السر
+    registrations:
+      destroyed: إلى اللقاء! تم إلغاء حسابك بنجاح. نتمنى رؤيتك مرة أخرى قريبًا.
+      signed_up: مرحبًا! لقد تم التسجيل بنجاح.
+      signed_up_but_inactive: لقد تم التسجيل بنجاح. ومع ذلك، لم نتمكن من تسجيل دخولك لأن حسابك لم يتم تنشيطه بعدُ.
+      signed_up_but_locked: لقد تم التسجيل بنجاح. ومع ذلك، لم نتمكن من تسجيل دخولك لأن حسابك مؤمّن.
+      signed_up_but_unconfirmed: تم إرسال رسالة بها رابط تأكيد إلى عنوان بريدك الإلكتروني. يُرجى فتح الرابط لتنشيط حسابك.
+      update_needs_confirmation: لقد حدّثت حسابك بنجاح، لكننا نرغب في التحقق من عنوان بريدك الإلكتروني الجديد. يُرجى التحقق من بريدك الإلكتروني والنقر على رابط التأكيد لإنهاء تأكيد عنوان بريدك الإلكتروني الجديد.
+      updated: لقد حدّثت حسابك بنجاح.
+    sessions:
+      sign_in: تسجيل الدخول
+      sign_out: تسجيل الخروج
+      signed_in: تم تسجيل الدخول بنجاح.
+      signed_out: تم تسجيل الخروج بنجاح.
+      remember_me: تذكرني
+    unlocks:
+      send_instructions: ستتلقى رسالة بريد إلكتروني بها تعليمات بخصوص كيفية إلغاء تأمين حسابك في غضون بضعة دقائق.
+      send_paranoid_instructions: إذا كان حسابك موجودًا، فسوف تتلقى رسالة بريد إلكتروني بها تعليمات بخصوص كيفية إلغاء تأمينه في غضون بضعة دقائق.
+      unlocked: تم إلغاء تأمين حسابك بنجاح. يُرجى تسجيل الدخول للمتابعة.
+  errors:
+    messages:
+      already_confirmed: تم تأكيده بالفعل، يُرجى محاولة تسجيل الدخول
+      confirmation_period_expired: يجب تأكيده خلال %{period}، يُرجى طلب واحد جديد
+      expired: انتهت صلاحيته، يُرجى طلب واحد جديد
+      not_found: لا يوجد
+      not_locked: لم يتم تأمينه
+      not_saved:
+        other: '%{count} من الأخطاء منع حفظ هذا %{resource}:'
+        one: 'خطأ واحد (1) منع حفظ هذا %{resource}:'
+      invalid_url: هذا العنوان غير صحيح

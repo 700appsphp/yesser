@@ -1,0 +1,35 @@
+<%- model_class = Eservice -%>
+<h2 class="page-header">
+  <% if @category %>
+    <% provide(:title, @category.name) %>
+  <% else %>
+    <% provide(:title, t('eservices.uncategorized')) %>
+  <% end %>
+</h2>
+<div class="box box-primary">
+  <div class="box-header">
+    <h3 class="box-title">
+      <%=t 'eservices.plural' %>
+    </h3>
+  </div>
+  <div class="box-body">
+    <p><%= @category.description if @category %></p>
+    <%= render 'table', eservices: @eservices %>
+  </div>
+  <div class="box-footer">
+    <% if @category %>
+      <%= link_to t('eservices.new'),
+                new_eservice_category_eservice_path(@category),
+                :class => 'btn btn-primary btn-flat' if @category.childless? %>
+      <% if @category.owner_type == 'Agency' %>
+        <%= link_to t(".back", :default => t("helpers.links.back")), @category.owner, :class => 'btn btn-default btn-flat' %>
+      <% else %>
+        <%= link_to t(".back", :default => t("helpers.links.back")), eservice_categories_path, :class => 'btn btn-default btn-flat' %>
+      <% end %>
+    <% else %>
+      <%= link_to t('eservices.new'),
+                new_eservice_path,
+                :class => 'btn btn-primary btn-flat' %>
+    <% end %>
+  </div>
+</div>

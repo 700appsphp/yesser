@@ -1,0 +1,9 @@
+<%- model_class = Agency -%>
+<% provide(:title, t("helpers.titles.new", model: model_class.model_name.human.titleize)) %>
+<%= render 'shared/error_messages', object: @agency %>
+<div class="box box-success">
+  <div class="box-body">
+    <%= render :partial => 'form' %>
+  </div>
+</div>
+

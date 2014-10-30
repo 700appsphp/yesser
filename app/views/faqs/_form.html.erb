@@ -1,0 +1,24 @@
+<%= render 'shared/error_messages', object: @faq %>
+<div class="box box-danger">
+  <%= form_for @faq do |f| %>
+  <div class="box-body">
+      <div class="form-group">
+        <%= f.label :question, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :question, :class => 'form-control', required: :required %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :answer, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_area :answer, :class => 'form-control', required: :required %>
+        </div>
+      </div>
+    </div>
+    <div class="box-footer">
+      <%= f.submit :class => 'btn btn-primary btn-flat' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                faqs_path, :class => 'btn btn-default btn-flat' %>
+    </div>
+    <% end %>
+  </div>

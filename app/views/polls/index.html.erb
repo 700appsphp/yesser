@@ -1,0 +1,57 @@
+<%- model_class = Poll -%>
+<% provide(:title, t('polls.index.title')) %>
+<% provide(:icon_class, "fa fa-users") %>
+
+<div class="box box-solid">
+  <div class="box-header">
+    <div class="box-tools">
+      <form action="<%= polls_path %>" method="GET">
+        <div class="input-group">
+          <input type="text" name="search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="<%=t "helpers.search" %>" value="<%= params[:search] %>" />
+          <div class="input-group-btn">
+            <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+      </form>
+    </div><!-- /.box-tools -->
+  </div><!-- /.box-header -->
+  <div class="box-body polls-list">
+    <% @polls.each do |poll| %>
+      <div class="box box-primary collapsed-box">
+        <div class="box-header">
+          <!-- tools box -->
+          <div class="pull-right box-tools">
+            <%=l poll.created_at %>
+            <button class="btn btn-primary btn-sm btn-flat" data-widget='collapse' data-toggle="tooltip" title="<%=t 'helpers.expand' %>"><i class="fa fa-expand"></i></button>
+          </div><!-- /. tools -->
+          <i class="fa fa-question-circle"></i>
+          <h3 class="box-title"><%= poll.question %></h3>
+        </div><!-- /.box-header -->
+        <div class="box-body" style="display: none;">
+          <ul class="poll-answers">
+            <% poll.answers.each do |answer| %>
+              <li>
+                <i class="fa fa-dot-circle-o"></i>
+                <span><%= answer.answer %></span> <span class="badge bg-aqua"><%= answer.answers_count %></span>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="<%= answer.precentage %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= answer.precentage %>%">
+                    <span class="sr-only"><%= t('polls.answers.answers_count', count: answer.answers_count) %></span>
+                    </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div><!-- /.box-body -->
+          <div class="box-footer" style="display: none;">
+            <%= render 'shared/edit_button', path: edit_poll_path(poll) %>
+            <%= render 'shared/delete_button', path: poll_path(poll) %>
+          </div>
+      </div>
+    <% end %>
+
+    <%= link_to t('polls.new'),
+                new_poll_path,
+                class: 'btn btn-primary' %>
+
+  </div><!-- /.box-body -->
+</div><!-- /.box -->

@@ -1,0 +1,24 @@
+<%= provide :title, @message.title %>
+
+<div class="box box-primary">
+  <div class="box-body no-padding">
+  <table class="table message-table">
+    <tr>
+      <td><b><%=t "messages.title" %></b></td>
+      <td><%= @message.title %></td>
+    </tr>
+    <tr>
+      <td><b><%=t "messages.description" %></b></td>
+      <td><%= @message.description %></td>
+    </tr>
+    <tr>
+      <td><b><%=t "messages.labels.image" %></b></td>
+      <td><%= image_tag @message.image_url if @message.image? %></td>
+    </tr>
+  </table>
+  </div>
+  <div class="box-footer">
+    <%= render 'shared/edit_button', path: edit_message_path(@message) %>
+    <%= render 'shared/delete_button', path: message_path(@message) %>
+  </div>
+</div>

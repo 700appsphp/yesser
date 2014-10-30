@@ -1,0 +1,7 @@
+<%- model_class = Eservice -%>
+<% provide(:title, t('helpers.titles.new', model: model_class.model_name.human)) %>
+<div class="box box-success">
+  <div class="box-body">
+    <%= render :partial => 'form' %>
+  </div>
+</div>

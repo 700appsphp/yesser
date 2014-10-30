@@ -1,0 +1,27 @@
+// Place all the styles related to the Polls controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.poll-answers{
+  margin: 0;
+  padding: 0px 0px;
+  list-style: none;
+}
+
+.poll-answers > li{
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 10px;
+  background: #f3f4f5;
+  margin-bottom: 2px;
+  border-left: 2px solid #e6e7e8;
+  color: #444;
+}
+
+.poll-answers > li .progress{
+  margin-top: 10px;
+}
+.polls-list .box:first-child{
+  margin-top: 15px;
+}

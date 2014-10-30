@@ -1,0 +1,8 @@
+<%- model_class = Category -%>
+<% provide :title, t("helpers.titles.edit", 
+   name: @category.name, model: model_class.model_name.human) %>
+<div class="box box-danger">
+  <div class="box-body">
+    <%= render :partial => 'categories/form' %>
+  </div>
+</div>

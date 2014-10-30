@@ -1,0 +1,10 @@
+<% provide(:title, t("rss.title")) %>
+<% provide(:icon_class, "fa fa-rss") %>
+
+<div class="box box-primary">
+  <% if @rss.id %>
+    <%= render 'show_rss' %>
+  <% else %>
+    <%= render 'show_new_rss' %>
+  <% end %>
+</div>

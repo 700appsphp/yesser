@@ -1,0 +1,40 @@
+<%- model_class = Eservice -%>
+<% provide :title, @eservice.name %>
+<div class="box box-primary">
+  <div class="box-body">
+    <%= image_tag @eservice.logo_url.to_s if @eservice.logo? %>
+
+    <dl class="dl-horizontal">
+      <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+      <dd><%= @eservice.name %></dd><br />
+      <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+      <dd><%= @eservice.description %></dd><br />
+      <dt><strong><%= model_class.human_attribute_name(:url) %>:</strong></dt>
+      <dd><%= @eservice.url %></dd><br />
+      <dt><strong><%= model_class.human_attribute_name(:category_id) %>:</strong></dt>
+      <dd><%= @eservice.category_id %></dd><br />
+      <dt><strong><%= model_class.human_attribute_name(:owner_id) %></strong></dt>
+      <dd><%= @owner.name %></dd><br />
+      <dt><strong><%= model_class.human_attribute_name(:owner_type) %></strong>
+      <dd><%= @eservice.owner_type %></dd>
+    </dl>
+  </div>
+  <div class="box-footer">
+
+<% if @eservice.owner.categorize_eservices? %>
+  <%= link_to t('eservices.move'),
+                  move_eservice_path(@eservice), :class => 'btn btn-default' %>
+<% end %>
+<%= render 'shared/edit_button', path: edit_eservice_path(@eservice) %>
+<%= render 'shared/delete_button', path: eservice_path(@eservice) %>
+<% if @eservice.category %>
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+                eservice_category_eservices_path(@eservice.category), :class => 'btn btn-default'  %>
+<% elsif @eservice.owner_type == 'Agency' %>
+  <%= link_to t('.back', :default => t("helpers.links.back")), @eservice.owner, :class => 'btn btn-default' %>
+<% else %>
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+                eservice_categories_path, :class => 'btn btn-default'  %>
+<% end %>
+  </div>
+</div>

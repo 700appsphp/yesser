@@ -1,0 +1,18 @@
+<% if object.errors.any? %>
+  <div class="callout callout-danger">
+    <h4><%= t('helpers.error_message', count: object.errors.count) %></h4>
+    <ul>
+      <% object.errors.each do |key, msg| %>
+        <% new_key = fix_error_key(key) %>
+        <% unless msg.empty? %>
+          <script type="text/javascript">
+            $(window).ready(function () {
+              $('[id^="<%= object.class.name.downcase %>_' + '<%= new_key %>"]').closest(".form-group").addClass("has-error");
+            });
+          </script> 
+        <% end %>
+        <li><%= new_key.humanize.capitalize + " " + msg %></li>
+      <% end %>
+    </ul>
+    </div>
+<% end %>

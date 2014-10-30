@@ -1,0 +1,139 @@
+ar:
+  activerecord:
+    models:
+      organization: مؤسسة
+      organization_user: مدير مؤسسة
+      agency: وكالة
+      eservice: خدمة إلكترونية
+      faq: الأسئلة الشائعة
+      eservice_category: فئة الخدمة الإلكترونية
+      agency_category: فئة الوكالة
+      city: المدينة
+      complaint: شكوى
+      app: تطبيق
+      admin_user: مدير يسر
+      answer: إجابة
+      category: تصنيف
+      email: بريد إلكتروني
+      fax: فاكس
+      message: رسالة
+      news: خبر
+      phone: رقم هاتف
+      poll: استطلاع رأي
+      rss: RSS
+      social_network: شبكة إجتماعية
+    attributes:
+      organization:
+        name: الإسم
+        description: التوصيف
+        longitude: خط الطول
+        latitude: دائرة العرض
+        address: العنوان
+        mission: المهمة
+        vision: الرؤية
+        message: الرسالة
+        logo: شعار
+        website: الموقع الإكتروني
+        created_at: إنشئ في
+        updated_at: آخر تحديث في
+        admins: مديري المؤسسة
+        apps: التطبيقات
+        emails: البريد الإلكتروني
+        faxes: ارقام الفاكس
+        phones: ارقام الهاتف
+        social_networks: الشبكات الإجتماعية
+      organization_user:
+        organization: مؤسسة
+        email: البريد الإرلكتروني
+        password: كلمة المرور
+        current_password: كلمة المرور الحالية
+        password_confirmation: تأكيد كلمة المرور
+        sign_in_count: عدد مرات تسجيل الدخول
+        last_sign_in_at: آخر تسجيل دخول
+        created_at: انشئ في
+        last_sign_in_ip: مكان آخر تسجيل دخول
+      agency:
+        name: الإسم
+        description: التوصيف
+        longitude: خط الطول
+        latitude: دائرة العرض
+        address: العنوان
+        mission: المهمة
+        vision: الرؤية
+        message: الرسالة
+        logo: شعار
+        website: الموقع الإكتروني
+        category: التصنيف
+        city: المدينة
+        city_id: المدينة
+        created_at: إنشئ في
+        updated_at: آخر تحديث في
+        emails: البريد الإلكتروني
+        faxes: ارقام الفاكس
+        phones: ارقام الهاتف
+      eservice:
+        name: الإسم
+        description: التوصيف
+        url: عنوان URL
+        logo: الشعار
+      faq:
+        question: السؤال
+        answer: الإجابة
+      eservice_category:
+        name: الإسم
+        description: التوصيف
+      agency_category:
+        name: الإسم
+        description: التوصيف
+      city:
+        id: الرقم المسلسل
+        arabic_name: الإسم عربي
+        english_name: الإسم إنجليزي
+        longitude: خط الطول
+        latitude: دائرة العرض
+        agencies: الهيئات
+      complaint:
+        email: البريد الإلكتروني
+        agency_id: معرف آمر
+      app:
+        url: عنوان URL
+        platform: بيئة العمل
+        name: الإسم
+        image: الشعار
+        description: التوصيف
+      admin_user:
+        email: البريد الإرلكتروني
+        password: كلمة المرور
+        password_confirmation: تأكيد كلمة المرور
+        sign_in_count: عدد مرات تسجيل الدخول
+        last_sign_in_at: آخر تسجيل دخول
+        created_at: انشئ في
+        last_sign_in_ip: مكان آخر تسجيل دخول
+      answer:
+        answer: الإجابة
+        answers_count: عدد الإجابات
+      category:
+        name: الإسم
+        description: التوصيف
+      email:
+        email: البريد الإلكتروني
+      fax:
+        number: رقم الفاكس
+      message:
+        title: العنوان
+        description: التوصيف
+        image: صورة
+      news:
+        title: العنوان
+        body: المحتوي
+      phone:
+        number: رقم الهاتف
+      poll:
+        question: السؤال
+        answers: الإجابات
+      rss:
+        url: عنوان URL
+      social_network:
+        name: الإسم
+        url: عنوان URL
+

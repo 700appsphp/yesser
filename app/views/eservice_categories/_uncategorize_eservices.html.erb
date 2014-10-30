@@ -1,0 +1,14 @@
+<div class="box-header">
+  <h2 class="box-title">
+    <%=t "uncategorized" %>
+  </h2>
+</div>
+<div class="box-body <%= "no-padding" if !@uncategorized_eservices.blank? %>">
+  <%= render "eservices/table", eservices: eservices %>
+</div>
+<div class="box-footer">
+  <%= link_to eservice_path, 
+              class: 'btn btn-primary btn-flat' do %>
+    <i class='fa fa-wrench'></i><%= t('eservices.new') %>
+  <% end %>
+</div>

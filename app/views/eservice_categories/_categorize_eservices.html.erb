@@ -1,0 +1,21 @@
+<div class="box-header">
+  <h2 class="box-title">
+    <%=t 'categorized' %>
+  </h2>
+</div>
+<div class="box-body category-container">
+  <% if !categories.blank? %>
+    <ul>
+      <%= nested_categories(categories, 
+                            "categories/eservice_category",
+                            false, nil) %>
+    </ul>
+  <% end %>
+
+</div>
+<div class="box-footer">
+  <%= link_to category_path, 
+              class: 'btn btn-primary btn-flat' do %>
+    <i class="fa fa-star"></i><%=t 'categories.new_root' %>
+  <% end %>
+</div>

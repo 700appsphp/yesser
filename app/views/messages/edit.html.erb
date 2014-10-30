@@ -1,0 +1,6 @@
+<%- model_class = Faq -%>
+<% provide(:title, t("helpers.titles.edit", name: @message.title, 
+            model: model_class.model_name.human )) %>
+<div class="box box-danger">
+  <%= render 'form' %>
+</div>

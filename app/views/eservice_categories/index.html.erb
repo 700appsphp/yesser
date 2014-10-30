@@ -1,0 +1,38 @@
+<%- model_class = EserviceCategory -%>
+<%- agency_class = Eservice -%>
+<% provide(:title, t('eservices.plural')) %>
+<% provide(:icon_class, "fa fa-sitemap") %>
+
+<% if @organization.eservices_fresh_install? %>
+  <div class="callout callout-warning">
+    <h4><%=t "helpers.note" %></h4>
+    <p><%=t "eservices.fresh_install_note" %></p>
+  </div>
+  <div class="box box-primary">
+    <div class="box-body">
+    <%= render 'fresh_install', category_path: new_eservice_category_path,
+      eservice_path: new_eservice_path %>
+    </div>
+  </div>
+<% end %>
+
+<% if @organization.allow_eservices? %>
+  <% if @organization.categorize_eservices? %>
+    <div class="box box-primary">
+    <%= render 'categorize_eservices', categories: @categories,
+        category_path: new_eservice_category_path %>
+    </div>
+  <% end %>
+
+
+  <% if !@organization.categorize_eservices? %>
+    <div class="box box-primary">
+      <%= render 'uncategorize_eservices', eservices: @uncategorized_eservices,
+          eservice_path: new_eservice_path %>
+    </div>
+  <% end %>
+<% else %>
+  <% if !@organization.eservices_fresh_install? %>
+    <%= render 'blocked' %>
+  <% end %>
+<% end %>

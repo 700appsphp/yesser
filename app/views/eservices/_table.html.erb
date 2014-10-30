@@ -1,0 +1,27 @@
+<%- eservice_class = Eservice -%>
+
+<% if !eservices.blank? %>
+  <table class="table table-striped">
+    <tr>
+      <th><%= eservice_class.human_attribute_name(:name) %></th>
+      <th><%= eservice_class.human_attribute_name(:logo) %></th>
+      <th><%= eservice_class.human_attribute_name(:url) %></th>
+      <th><%= eservice_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+    <% eservices.each do |eservice| %>
+      <tr>
+        <td><%= link_to eservice.name, eservice %></td>
+        <td><%= image_tag eservice.logo_url(:thumb).to_s, class: 'thumb' if eservice.logo? %></td>
+        <td><%= eservice.url %></td>
+        <td><%=l eservice.created_at %></td>
+        <td>
+          <%= render 'shared/edit_button', path: edit_eservice_path(eservice), small: true %>
+          <%= render 'shared/delete_button', path: eservice_path(eservice), small: true %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <span class="single-category col-xs-12"><%= t("eservices.name.zero") %></span>
+<% end %>

@@ -1,0 +1,138 @@
+ar:
+  active_admin:
+    menu:
+      organizations: المؤسسات
+      organization_users: مديري المؤسسات
+      admin_users: مديري يسر
+      cities: المدن
+
+    dashboard: يسر
+    admin_details: تفاصيل عن المدير
+    powered_by: مدعوم بواسطة يسر
+    created_at_filter: تم الإنشاء بين
+    last_sign_in_filter: تسجيل الدخول الأخير بين
+    url: عنوان URL
+    dashboard_welcome:
+      welcome: "أهلاً بكم في Active Admin. هذه هي الصفحة الإفتراضية."
+      call_to_action: "لتعديلها, تفقد 'app/admin/dashboard.rb'"
+    view: "عرض"
+    edit: "تعديل"
+    delete: "حذف"
+    delete_confirmation: "هل انت متأكد من حذف هذا?"
+    new_model: "%{model} جديد"
+    create_model: "%{model} جديد"
+    edit_model: "تعديل %{model}"
+    update_model: "تعديل %{model}"
+    delete_model: "حذف %{model}"
+    details: "تفاصيل %{model}"
+    cancel: "إلغاء"
+    empty: "فارغ"
+    previous: "السابق"
+    next: "التالي"
+    download: "تحميل:"
+    has_many_new: "إضافة %{model} جديد"
+    has_many_delete: "حذف"
+    has_many_remove: "حذف"
+    filters:
+      buttons:
+        filter: "تصفية"
+        clear: "إلغاء التصفية"
+      predicates:
+        contains: "تحتوي علي"
+        equals: "تطابق"
+        starts_with: "تبدء بـ"
+        ends_with: "تنتهي بـ"
+        greater_than: "أكبر من"
+        less_than: "أصغر من"
+    main_content: "من فضلك، implement %{model}#main_content ليظهر محتوي."
+    logout: "تسجيل خروج"
+    sidebars:
+      filters: "المرشحات"
+    pagination:
+      empty: "لا يوجد %{model}"
+      one: "عرض %{model} واحد"
+      one_page: "يُعرض <b>كل الـ %{n}</b> %{model}"
+      multiple: "ىُعرض %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> من <b>%{total}</b>"
+      multiple_without_total: "يُعرض %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b>"
+      entry:
+        one: "مُدخل"
+        other: "مُدخلات"
+    any: "الجميع"
+    blank_slate:
+      content: "لا يوجد %{resource_name} بعد."
+      link: "أنشئ واحد"
+    dropdown_actions:
+      button_label: "أفعال"
+    batch_actions:
+      button_label: "Batch Actions"
+      default_confirmation: "هل انت متأكد من فعل ذلك?"
+      delete_confirmation: "هل انت متأكد من حذف %{plural_model}?"
+      succesfully_destroyed:
+        one: "تم حذف 1 %{model}"
+        other: "تم حذف %{count} %{plural_model}"
+      selection_toggle_explanation: "(عكس الإختيار)"
+      link: "أنشئ واحد"
+      action_label: "تم إختيار %{title}"
+      labels:
+        destroy: "حذف"
+    comments:
+      resource_type: "النوع"
+      author_type: "نوع الناشر"
+      body: "المحتوي"
+      author: "الناشر"
+      title: "تعليق"
+      add: "إضافة تعليق"
+      resource: "نوع"
+      no_comments_yet: "لا تعليقات بعد."
+      author_missing: "غير معروف"
+      title_content: "(%{count}) تعليق"
+      errors:
+        empty_text: "لم يتم حفظ التعليق، لم يتم إدخال نص."
+    devise:
+      username:
+        title: "إسم المستخدم"
+      email:
+        title: "البريد الإلكتروني"
+      subdomain:
+        title: "Subdomain"
+      password:
+        title: "كلمة المرور"
+      sign_up:
+        title: "تسجيل مستخدم"
+        submit: "تسجيل"
+      login:
+        title: "تسجيل"
+        remember_me: "تذكرني"
+        submit: "تسجيل دخول"
+      reset_password:
+        title: "نسيت كلمة السر?"
+        submit: "إعادة إدخال كلمة السر"
+      change_password:
+        title: "تغيير كلمة السر"
+        submit: "تغيير كلمة السر"
+      unlock:
+        title: "إعادة إرسال تعليمات إذالة الحماية"
+        submit: "إعادة إرسال تعليمات إذالة الحماية"
+      resend_confirmation_instructions:
+        title: "إعادة إرسال تعليمات تأكيد الحساب"
+        submit: "إعادة إرسال تعليمات تأكيد الحساب"
+      links:
+        sign_in: "تسجيل الدخول"
+        forgot_your_password: "نسيت كلمة السر?"
+        sign_in_with_omniauth_provider: "تسجيل الدخول بـ %{provider}"
+    access_denied:
+      message: "انت غير مصرح لك بفعل هذا."
+    index_list:
+      table: "جدول"
+      block: "قائمة"
+      grid: "شبكة"
+      blog: "مدونة"
+  formtastic:
+    :yes: 'نعم'
+    :no: 'لا'
+    :create: 'إضافة %{model}'
+    :update: 'تحديث %{model}'
+    :submit: 'إرسال %{model}'
+    :cancel: 'إلغاء %{model}'
+    :reset: 'إعادة %{model}'
+    :required: 'مطلوب'

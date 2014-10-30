@@ -1,0 +1,20 @@
+<span class="single-category col-xs-12">
+  <%= link_to cat.name, eservice_category_eservices_path(cat) %>
+  <span class="actions">
+    <% if cat.is_childless? %>
+      <%= link_to new_eservice_category_eservice_path(cat), 
+          class: 'btn btn-primary btn-sm btn-flat' do %>
+        <i class="fa fa-wrench"></i>
+        <%=t 'eservices.new' %>
+      <% end %>
+    <% end %>
+
+    <%= link_to new_eservice_category_path(parent_id: cat.id), 
+        class: 'btn btn-primary btn-sm btn-flat' do %>
+      <i class="fa fa-level-down"></i>
+      <%=t 'categories.new_child' %>
+    <% end %>
+    <%= render 'shared/edit_button', small: true, path: edit_eservice_category_path(cat) %>
+    <%= render 'shared/delete_button', small: true, path: eservice_category_path(cat.id), object: cat %>
+  </span>
+</span>

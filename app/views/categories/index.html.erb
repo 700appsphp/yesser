@@ -1,0 +1,19 @@
+<%- model_class = Category -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+
+<div class="box-body category-container">
+<%= link_to t('categories.new_root'), new_category_path, :class => 'btn btn-primary btn-flat' %>
+<%= link_to t('agencies.new_root'), new_agency_path, :class => 'btn btn-primary btn-flat' %>
+<%= link_to t('eservice.new_root'), new_eservice_path, :class => 'btn btn-primary btn-flat' %>
+<% if @categories %>
+  <div>
+    <ul><%= nested_categories @categories.arrange %></ul>
+  </div>
+<% end %>
+</div>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_category_path,
+            :class => 'btn btn-primary' %>

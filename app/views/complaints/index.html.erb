@@ -1,0 +1,45 @@
+<% provide(:title, t("complaints.title")) %>
+<% provide(:icon_class, "fa fa-bullhorn") %>
+<div class="box box-primary">
+  <% if not @complaint.receiver %>
+    <div class="box-body">
+      <h4><%=t 'complaints.first_time' %></h4>
+    </div>
+    <div class="box-footer">
+      <%= link_to t("complaints.email.new"), complaints_email_edit_path, 
+          class: "btn btn-flat btn-primary" %>
+      <%= link_to t("complaints.amer.new"), complaints_agency_edit_path,
+          class: "btn btn-flat btn-primary" %>
+    </div>
+  <% elsif @complaint.use_email? %>
+    <div clas="box-body">
+      <h4>
+        <dl class="dl-horizontal">
+          <dt><%=t "complaints.email.title" %></dt>
+          <dd><%= @complaint.email %></dd>
+        </dl>
+      </h4>
+    </div>
+    <div class="box-footer">
+      <%= render 'shared/edit_button', path: complaints_email_edit_path, 
+          text: t("complaints.email.edit") %>
+      <%= link_to t("complaints.amer.use"), complaints_switch_method_path(use: "amer"),
+          class: "btn btn-flat btn-primary" %>
+    </div>
+  <% elsif @complaint.use_amer? %>
+    <div class="box-body">
+      <h4>
+        <dl class="dl-horizontal">
+          <dt><%=t "complaints.amer.title" %></dt>
+          <dd><%= @complaint.agency_id %></dd>
+        </dl>
+      </h4>
+    </div>
+    <div class="box-footer">
+      <%= render 'shared/edit_button', path: complaints_agency_edit_path,
+          text: t("complaints.amer.edit") %>
+      <%= link_to t("complaints.email.use"), 
+          complaints_switch_method_path(use: "email"), class: "btn btn-flat btn-primary" %>
+    </div>
+  <% end %>
+</div>

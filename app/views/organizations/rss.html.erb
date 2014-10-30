@@ -1,0 +1,10 @@
+<%= form_for @organization do |f| %>
+  <div>
+    <%= f.label "RSS URL", for: :rss_url %>
+    <%= f.text_field :rss_url %>
+
+  <%= f.submit %>
+  </div>
+<% end %>
+
+<div><%= link_to :back, root_path %></div>

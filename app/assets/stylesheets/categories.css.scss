@@ -1,0 +1,22 @@
+// Place all the styles related to the Categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.category-container {
+	> ul {
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+		.single-category{
+			background: rgba(0, 0, 0, .1);
+			min-height: 30px;
+			height: auto;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+span .actions {
+	float: right;
+}

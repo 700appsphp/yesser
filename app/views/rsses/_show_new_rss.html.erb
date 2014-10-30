@@ -1,0 +1,8 @@
+<div class="box-body">
+  <div class="alert alert-warning">
+    <%=t "rss.no_rss_alert" %>
+  </div>
+</div>
+<div class="box-footer">
+  <%= link_to t('rss.add_url'), new_rss_path(@rss, locale: I18n.locale), class: "btn btn-flat btn-primary" %>
+</div>

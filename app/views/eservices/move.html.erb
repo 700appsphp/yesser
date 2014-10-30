@@ -1,0 +1,17 @@
+<% provide(:title, [t("eservices.move"), @eservice.name].join(" ")) %>
+<div class="box box-danger">
+<%= form_for @eservice, url: { action: "apply_move" } do |f| %>
+  <div class="box-body category-container">
+    <ul>
+      <%= nested_categories(@categories, 
+                            "categories/choose_category",
+                            true, f) %>
+    </ul>
+  </div>
+  <div class="box-footer">
+    <%= f.submit class: 'btn btn-primary btn-flat' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+              :back, :class => 'btn btn-default' %>
+  </div>
+<% end %>
+</div>

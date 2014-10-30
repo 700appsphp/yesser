@@ -1,0 +1,14 @@
+<% provide(:title, t("complaints.amer.edit")) %>
+<%= render 'shared/error_messages', object: @complaint %>
+<%= form_for @complaint, url: complaints_agency_update_path, method: :put do |f| %>
+  <div class="form-group">
+    <%= f.label :agency_id, t("complaints.amer.title"), class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :agency_id, :class => 'form-control', required: :required %>
+    </div>
+  </div>
+  <%= f.submit t("complaints.amer.update"), class: "btn btn-flat btn-primary" %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            complaints_index_path, :class => 'btn btn-flat btn-default' %>
+
+<% end %>

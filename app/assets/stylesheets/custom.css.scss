@@ -1,0 +1,42 @@
+.file_field {
+  float: left;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.thumb {
+  float: left;
+}
+textarea.form-control {
+  width: calc(80% - 22px);
+}
+
+.high{
+  border: 1px solid red;
+}
+
+.form-group{
+  height: auto;
+  overflow: hidden;
+}
+
+.box-body{
+  height: auto;
+  overflow: hidden;
+}
+
+form input[type=text],
+form input[type=password],
+form input[type=email],
+form input[type=number],
+form input[type=url],
+form input[type=tel],
+form textarea {
+  width: calc(80% - 22px);
+}
+
+a.btn{
+  i{
+    padding-right: 3px; 
+  }
+}

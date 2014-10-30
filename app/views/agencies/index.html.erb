@@ -1,0 +1,35 @@
+<%- model_class = Agency -%>
+<h2 clas="page-header">
+  <% if @category %>
+  <%= provide(:title, @category.name) %>
+  <% else %>
+    <%= t('agencies.uncategorized') %>
+  <% end %>
+</h2>
+<div class="box box-primary">
+  <div class="box-header">
+    <h3 class="box-title">
+      <%=t "agencies.plural" %>
+    </h2>
+  </div>
+  <div class="box-body">
+    <p><%= @category.description if @category %></p>
+    <%= render 'table', agencies: @agencies %>
+  </div>
+  <div class="box-footer">
+    <% if @category %>
+      <% if @category.childless? %>
+        <%= link_to new_agency_category_agency_path(@category),
+            class: 'btn btn-primary btn-flat' do %>
+          <i class="fa fa-building-o"></i>
+          <%= t('agencies.create', default: t("helpers.links.new")) %>
+        <% end %>
+      <% end %>
+      <%= link_to t(".back", :default => t("helpers.links.back")), agency_categories_path, :class => 'btn btn-default btn-flat' %>
+    <% else %>
+      <%= link_to t('agencies.create'),
+                new_agency_path,
+                :class => 'btn btn-primary btn-flat' %>
+    <% end %>
+  </div>
+</div>

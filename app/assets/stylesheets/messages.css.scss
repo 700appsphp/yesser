@@ -1,0 +1,13 @@
+// Place all the styles related to the Messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.message-table.table > thead > tr > th,
+.message-table.table > tbody > tr > th,
+.message-table.table > tfoot > tr > th,
+.message-table.table > thead > tr > td,
+.message-table.table > tbody > tr > td,
+.message-table.table > tfoot > tr > td {
+  border-top: 0px;
+}

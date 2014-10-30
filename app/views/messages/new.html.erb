@@ -1,0 +1,6 @@
+<%- model_class = Message -%>
+<% provide(:title, t("helpers.titles.new", model: model_class.model_name.human.titleize)) %>
+
+<div class="box box-success">
+  <%= render :partial => 'form' %>
+</div>

@@ -1,0 +1,23 @@
+<div class="form-box" id="login-box">
+  <div class="header">
+    <%=t 'helpers.forgot_password' %>
+  </div>
+  <% flash.each do |key, message| %>
+    <div class="callout callout-danger callout-signin">
+      <%= content_tag :div, message %>
+    </div>
+  <% end %>
+
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= devise_error_messages_customed! %>
+
+    <div class="body bg-gray">
+      <div class="form-group">
+        <%= f.email_field :email, autofocus: true, class: "form-control",
+            placeholder: t("organization_users.email") %></div>
+      </div>
+      <div class="footer">
+        <%= f.submit t("devise.passwords.request_reset_instructions"), class: "btn bg-olive btn-block" %></div>
+      </div>
+  <% end %>
+</div>

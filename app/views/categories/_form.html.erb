@@ -1,0 +1,32 @@
+
+<% if !@parent.nil? && @parent.categorized_objects? %>
+  <div class="alert alert-danger"><b><%= t('helpers.alert_text') %>: </b><%= t('categories.has_children_alert', parent: @parent.name) %></div>
+<% end %>
+
+<%= render 'shared/error_messages', object: @category %>
+
+<%= form_for @category do |f| %>
+
+  <%= f.hidden_field :parent_id %>
+  <%= f.hidden_field :owner_type %>
+  <%= f.hidden_field :owner_id %>
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'form-control', required: :required %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :description, :class => 'form-control' %>
+    </div>
+  </div>
+
+  <div class="box-footer">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+              :back, :class => 'btn btn-default' %>
+  </div>
+<% end %>

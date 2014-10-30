@@ -1,0 +1,5 @@
+<%- model_class = Faq -%>
+<% provide(:title, t("helpers.titles.edit", name: @faq.question, 
+            model: model_class.model_name.human )) %>
+<%= render :partial => 'form' %>
+

@@ -1,0 +1,7 @@
+<% provide :title, t("home") %>
+<div class="alert alert-info">
+  <h2><%= t("welcome_message", organization: @organization.name) %></h2>
+  <% if @organization.miss_essential_data? %>
+      <%= link_to t('helpers.add_essential_data'), edit_organization_path(@organization), class: "btn btn-warning btn-flat" %>
+  <% end %>
+</div>

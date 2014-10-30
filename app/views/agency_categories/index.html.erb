@@ -1,0 +1,63 @@
+<%- model_class = AgencyCategory -%>
+
+<% provide(:icon_class, "fa fa-sitemap") %>
+<% provide(:title, t("agencies.plural")) %>
+
+<% if @organization.agencies_fresh_install? %>
+  <div class="box box-primary">
+    <div class="box-body">
+      <h4><%=t "agencies.fresh_install_notify" %></h4>
+    </div>
+    <div class="box-footer">
+      <%= link_to t("agencies.use_categories"), new_agency_category_path, 
+                  class: 'btn btn-primary btn-flat' %>
+      <%= link_to t("agencies.use_no_categories"), new_agency_path,
+                  class: 'btn btn-primary btn-flat' %>
+    </div>
+<% end %>
+
+<% if @organization.categorize_agencies? %>
+<div class="box box-primary">
+  <div class="box-header">
+    <h2 class="box-title">
+    <%=t 'categorized' %>
+    </h2>
+  </div>
+  <div class="box-body category-container">
+    <% if !@categories.blank? %>
+      <ul>
+        <%= nested_categories(@categories, 
+                              model_class.model_name.to_s.underscore,
+                              false, nil) %>
+      </ul>
+    <% end %>
+
+  </div>
+  <div class="box-footer">
+    <%= link_to new_agency_category_path, 
+        class: 'btn btn-primary btn-flat' do %>
+      <i class="fa fa-star"></i><%=t 'categories.new_root' %>
+    <% end %>
+  </div>
+</div>
+<% end %>
+
+
+<% if !@organization.categorize_agencies? and @organization.has_agencies? %>
+<div class="box box-primary">
+  <div class="box-header">
+    <h2 class="box-title">
+      <%= t("uncategorized") %>
+    </h2>
+  </div>
+  <div class="box-body <%= "no-padding" if !@uncategorized_agencies.blank? %>">
+      <%= render "agencies/table", agencies: @uncategorized_agencies %>
+  </div>
+  <div class="box-footer">
+    <%= link_to new_agency_path, 
+        class: 'btn btn-primary btn-flat' do %>
+      <i class="fa fa-building-o"></i><%= t('agencies.create') %>
+    <% end %>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,11 @@
+<% text = t('edit') unless local_assigns.has_key?(:text) %>
+<% small = false unless local_assigns.has_key?(:small) %>
+<% btn_class = "btn btn-default btn-flat" %> 
+<% if small %>
+  <% btn_class += " btn-sm" %>
+<% end %>
+<%= link_to path,
+    class: btn_class do %>
+  <i class="fa fa-edit"></i>
+  <%= text %>
+<% end %>

@@ -1,0 +1,19 @@
+<span class="single-category col-xs-12">
+  <%= link_to cat.name, agency_category_agencies_path(cat) %>
+  <span class="actions">
+    <% if cat.childless? %>
+      <%= link_to(new_agency_category_agency_path(cat),
+          class: 'btn btn-primary btn-sm btn-flat') do %>
+        <i class="fa fa-building-o"></i>
+        <%=t 'agencies.create' %>
+      <% end %>
+    <% end %>
+    <%= link_to new_agency_category_path(parent_id: cat.id),
+        class: 'btn btn-primary btn-sm btn-flat' do %>
+      <i class="fa fa-level-down"></i>
+      <%=t 'categories.new_child' %>
+    <% end %>
+    <%= render 'shared/edit_button', small: true, path: edit_agency_category_path(cat) %>
+    <%= render 'shared/delete_button', small: true, path: agency_category_path(cat.id), object: cat %>
+  </span>
+</span>

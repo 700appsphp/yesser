@@ -1,0 +1,8 @@
+<%- model_class = Agency -%>
+<% provide(:title, [t("edit"), @agency.name].join(" ")) %>
+<%= render 'shared/error_messages', object: @agency %>
+<div class="box box-danger">
+  <div class="box-body">
+    <%= render :partial => 'form' %>
+  </div>
+</div>

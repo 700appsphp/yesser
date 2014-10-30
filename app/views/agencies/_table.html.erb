@@ -1,0 +1,23 @@
+<% if agencies.blank? %>
+    <p><%=t 'agencies.no_agencies' %></p>
+<% else %>
+<table class="table table-striped">
+    <tr>
+        <th><%=t 'helpers.name' %></th>
+        <th><%=t 'helpers.logo' %></th>
+        <th><%=t 'helpers.created_at' %></th>
+        <th><%=t 'helpers.actions' %></th>
+    </tr>
+    <% agencies.each do |agency| %>
+        <tr>
+            <td><%= link_to agency.name, agency %></td>
+            <td><% if agency.logo? %><%= image_tag agency.logo_url(:thumb).to_s, class: 'thumb' %><% end %></td>
+            <td><%= agency.created_at %></td>
+            <td>
+              <%= render 'shared/edit_button', path: edit_agency_path(agency), small: true %>
+              <%= render 'shared/delete_button', path: agency_path(agency), small: true %>
+            </td>
+        </tr>
+    <% end %>
+</table>
+<% end %>

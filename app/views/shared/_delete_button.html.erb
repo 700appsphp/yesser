@@ -1,0 +1,16 @@
+<% small = false unless local_assigns.has_key?(:small) %>
+<% btn_class = "btn btn-danger btn-flat" %> 
+<% if small %>
+  <% btn_class += " btn-sm" %>
+<% end %>
+<% if local_assigns.has_key?(:object) %>
+  <% confirmation = t("#{object.class.model_name.i18n_key}.delete_alert", default: t("helpers.confirm")) %>
+<% else %>
+  <% confirmation = t('helpers.confirm') %>
+<% end %>
+<%= link_to path,
+    class: btn_class,
+    data: { confirm: confirmation }, method: :delete do %>
+  <i class="fa fa-trash-o"></i>
+  <%=t 'delete' %>
+<% end %>

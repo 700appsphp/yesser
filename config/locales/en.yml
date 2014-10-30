@@ -1,0 +1,268 @@
+en:
+  project_name: Yesser
+  activerecord:
+    models:
+      organization: Organization
+      organization_user: Organization Admin
+      agency: Agency
+      eservice: E-Service
+      faq: FAQ
+      eservice_category: E-Service Category
+      agency_category: Agency Category
+      city: City
+      complaint: Complaint
+    attributes:
+      agency:
+        longitude: Longitude
+        latitude: Latitude
+      organization:
+        name: Name
+        created_at: Created at
+        longitude: Longitude
+        latitude: Latitude
+      app:
+        url: URL
+    errors:
+      models:
+        organization_user:
+          attributes:
+            current_password:
+              invalid: is incorrect
+  about: About
+  home: Home
+  error: error
+  edit: Edit
+  delete: Delete
+  categorized: Categorized
+  uncategorized: Uncategorized
+  welcome_message: 'Welcome to %{organization}!'
+  flash:
+    actions:
+      create:
+        info: "%{resource_name} was successfully created."
+      update:
+        info: "%{resource_name} was successfully updated."
+      destroy:
+        info: "%{resource_name} was successfully deleted."
+        danger: "%{resource_name} could not be deleted."
+  active_admin:
+    admin_details: Admin Details
+    powered_by: Powered by Yesser
+    created_at_filter: Created between
+    last_sign_in_filter: Last sign in between
+    url: URL
+    dashboard: Yesser
+    menu:
+      organizations: Organizations
+      organization_users: Organization Admins
+      admin_users: Admins
+      cities: Cities
+  app_name: Yesser
+  created_at: Created At
+  hello: Hello world
+  helpers:
+    add_essential_data: complete profile data
+    blocked: Blocked!
+    note: Note
+    alert_text: Alert
+    language: language
+    arabic: Arabic
+    english: English
+    titles:
+      edit: Edit %{name} %{model}
+      new: New %{model}
+      view_all: View all %{model}
+    sign_in: Sign In
+    forgot_password: Forgot your password?
+    change_password: Change your password
+    logout: Log Out
+    confirm: Are you sure?
+    cancel: Cancel
+    error_message: 
+      one: The form contains one error
+      other: The form contains %{count} errors
+    labels:
+      name: Name
+      url: Url
+      platform: Platform
+      description: Description
+      image: Image
+    toggle_navigation: Toggle navigation
+    select_city: Select A City
+    search: Search
+    expand: Expand
+  layouts:
+    application:
+      helper:
+        profile: Profile
+        logout: Sign out
+  organizations:
+    plural: Organizations
+    create: Create New Organization
+    details: Organization Details
+    edit: Edit Organization
+    edit_password: Edit Password
+    name: Organization
+    admins_list: Admins
+    admin_user: Admin Account
+    phones_list: Organization Phone Numbers
+    phone: Phone Number
+    add_phone: Add a phone number
+    faxes_list: Organization Faxes Numbers
+    fax: Fax Number
+    add_fax: Add a fax number
+    emails_list: Organization Emails
+    email: Email
+    add_email: Add an email
+    invalid_email: is not a valid email
+    social_networks_list: Organization Social Networks
+    social_network: Social Network
+    add_social_network: Add a Social Network
+    app_list: App List
+    app_details: App Details
+    location:
+      title: Location
+      longitude: Longitude
+      latitude: Latitude
+  organization_users:
+    edit_password: Edit Password
+    edit_password_for: Edit %{name} Password
+    email: Email
+    password: Password
+    password_confirmation: Repeat Password
+    forgot_password: I forgot my password
+    details: Organization Admin Details
+  updated_at: Last Update
+  categories:
+    name: Category
+    create: Create New Category
+    plural: Categories
+    new_root: New Root Category
+    new_child: New Child
+    created: Category created successfully
+    updated: Category updated successfully
+    destroyed: Category deleted successfully
+    has_children_alert: Note that parent category %{parent} has categorized elements that will be moved to this new category
+  agencies:
+    name:
+      zero: No Agencies
+      one: one Agency
+      other: "%{count} Agencies"
+    title: Agency
+    plural: Agencies
+    details: Agency Details
+    create: New Agency
+    new_root: New Uncategorized Agency
+    no_agencies: No Agencies
+    creation_refused: You can not create an agency under a non-leef category
+    uncategorized: Uncategorized agencies
+    use_categories: Categorized method
+    use_no_categories: Uncategorized method
+    move: Move
+    fresh_install_notify_title: Make a Choice
+    fresh_install_notify: Please choose a method for adding a new agency.
+                          Be aware that your choice will affect all future agencies!
+    eservices:
+      fresh_install_note: Please note that you are adding e-services under this agency. 
+                          If you
+                          choose to add e-services here, you will not be able to add
+                          any organization e-services.
+      not_allowed: You chose to use organization e-services only. If you want to 
+                   use agency e-services instead, delete all e-services and e-service
+                   categories owned by the organization first.
+  eservices:
+    no_eservices: No E-Services
+    name:
+      zero: No E-Services
+      one: one E-service
+      other: '%{count} E-Services'
+    title: E-Service
+    plural: E-Services
+    new: New E-Service
+    new_root: New Uncategorized E-Service
+    creation_refused: You cannot create an E-Service under a non-leef category
+    uncategorized: Uncategorized E-services
+    move: Move
+    fresh_install_notify_title: Make a Choice
+    fresh_install_note: Please note that any e-services you create here are direct e-services of current organization,
+                        they do NOT belong to any agency. If you choose to add e-services here, you will not be able to
+                        add agency e-services.
+    fresh_install_notify: Please choose a method for adding a new e-service.
+                          Be aware that your choice will affect all future e-services!
+    use_categories: Categorized method
+    use_no_categories: Uncategorized method
+  agency_categories:
+    title: Agency Category
+    index:
+      title: Agency Categories
+  agency_category:
+    delete_alert: You are going to delete all agencies and subcategories under this category.
+                  Are you sure you want to do this?
+  eservice_categories:
+    title: E-Service Category
+    index:
+      title: E-Service Categories
+    eservices_not_allowed: You chose to use agency e-services only. If you want to use direct
+                           organization e-services instead, delete all e-services and e-service
+                           categories owned by agencies first.
+  eservice_category:
+    delete_alert: You are going to delete all eservices and subcategories under this category.
+                  Are you sure you want to do this?
+  polls:
+    index:
+      title: Polls List
+    answers:
+      answers_count:
+        zero: No Votes
+        one: One Vote
+        other: '%{count} Vote'
+    title: Poll
+    plural: Polls
+    new: New Poll
+  faqs:
+    index:
+      title: FAQs List
+    title: FAQ
+    plural: FAQs
+    new: New FAQ
+    create: Create FAQ
+  complaints:
+    title: Complaints & Suggestions
+    first_time: Please choose a method for receiving complaints and suggestions.
+    amer:
+      title: Amer ID
+      new: Use Amer
+      use: Use Amer Instead
+      edit: Edit Amer ID
+      update: Update Amer ID
+      update_success: Amer ID updated successfully
+    email:
+      title: Email
+      new: Use Email
+      use: Use Email Instead
+      edit: Edit Email
+      update: Update Email
+      update_success: Email updated successfully
+  rss:
+    title: News
+    url: URL
+    no_rss_alert: You have no news URL defined
+    add_url: Add News URL
+    edit: Edit News
+    update: Update News
+  messages:
+    title: Message
+    plural: Messages
+    create: New Message
+  cities:
+    plural: Cities
+    english_name_error: Please enter a valid English name. Only English letters
+                        and dashes are allowed.
+    arabic_name_error: Please enter a valid Arabic name. Only Arabic letters, "Tashkeel" 
+                       and dashes are allowed.
+  phones:
+    number:
+      invalid: number is not correct
+  errors:
+    messages:
+      invalid_url: is not valid url
